@@ -3,16 +3,20 @@ class Band():
     self.name = name
     self.members = []
 
-  def __band_name__(self):
+  def __band_members__(self):
     return self.name
+
+
+  def __band_name__(self):
+    for i in self:
+      self.members.append(i)
+    return self.members
 
 
 
 class Musician(Band):
   def __init__(self, name):
     self.name = name
-
-
 
 
 
